@@ -7,6 +7,8 @@ class Show < ActiveRecord::Base
   end
 
   def most_popular_show
+    rating = Show.highest_rating
+    Show.where("rating = ?", rating)
     #use highest rating method to return show with highest rating
     #probably show where taing = 10
   end
