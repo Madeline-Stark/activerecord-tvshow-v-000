@@ -3,9 +3,7 @@ require 'pry'
 class Show < ActiveRecord::Base
 
   def highest_rating
-    show = Show.maximum(:rating)
-    show.rating
-    #max value in ratings column
+    Show.maximum(:rating)
   end
 
   def most_popular_show
