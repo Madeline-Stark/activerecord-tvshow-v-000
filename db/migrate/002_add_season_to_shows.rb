@@ -1,6 +1,6 @@
 class AddSeasonToShows < ActiveRecord::Migration
   def change
-    create_table :shows do |t|
+    add_column :shows do |t|
       t.string :season
 
       t.timestamps
