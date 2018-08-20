@@ -8,9 +8,8 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     rating = Show.highest_rating
+    binding.pry
     Show.where("rating = ?", rating)
-    #use highest rating method to return show with highest rating
-    #probably show where taing = 10
   end
 
   def lowest_rating
