@@ -7,9 +7,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-    # rating = Show.highest_rating
-    # binding.pry
-    Show.where("rating = ?", Show.highest_rating)[0]
+    Show.where("rating = ?", Show.highest_rating)[0] #need 0 so it's not returned as an array so it matches test
   end
 
   def self.lowest_rating
